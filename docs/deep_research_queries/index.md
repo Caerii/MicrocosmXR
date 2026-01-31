@@ -36,10 +36,11 @@
 37. Derive from first principles the existence of qualia
 38. Determine the nature of high sustained achievement without burnout
 39. How to have a hyper-growth SaaS product-led growth company in 2026 for my AI swarm product superintelligent.group
-40. nanotech.school question
-41. microcosm xr question
-42.
-43.
+40a. see query40a.md
+40b. see query40b.md (nanotech.school question)
+41. see query41.md (microcosm xr question)
+42. see query42.md (career questions for SWE -> Quant and XR roles) -> https://chatgpt.com/share/697cc11a-b394-8007-ac1a-7b9dc8558ede
+43. see query43.md (Academic Publishing Excellence and Research Impact)
 44.
 45.
 46.
