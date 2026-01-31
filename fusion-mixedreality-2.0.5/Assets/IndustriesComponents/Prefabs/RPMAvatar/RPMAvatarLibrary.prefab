@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4659346148898753322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4659346148898753316}
+  - component: {fileID: 4659346148898753323}
+  m_Layer: 0
+  m_Name: RPMAvatarLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4659346148898753316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659346148898753322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.08327511, y: 1.5695295, z: 0.2852248}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4659346148898753323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659346148898753322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab7c8fb5e460834897fac2c588b798e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedAvatars:
+  - avatarGameObject: {fileID: 3330879275391860431, guid: 5c9c13a6811806e4eb68627b8cf87645, type: 3}
+    avatarURL: rpmcached://men1
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 2294405966741292653, guid: 527a4713d1781a44b813b01ed232492c, type: 3}
+    avatarURL: rpmcached://men2
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 2405847466257162532, guid: c55d30d1dc037f344a6e5459876a8ed2, type: 3}
+    avatarURL: rpmcached://women1
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 7642741935878742886, guid: 836089f01bb59ed43ba82838c6c51b4f, type: 3}
+    avatarURL: rpmcached://men3
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 6492486489140342507, guid: 9aee212cb0d3dfd48925c6642db6bbc6, type: 3}
+    avatarURL: rpmcached://women2
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 8102474749081073285, guid: b4cbf554aa6e3ba489ca5759e76ab167, type: 3}
+    avatarURL: rpmcached://women3
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 7980538220290768308, guid: 30ace2ec733a1d24cbfc052247b92bf6, type: 3}
+    avatarURL: rpmcached://men4
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 1891103118471279527, guid: 7e11ad08e89b07f468fd769da0d9086d, type: 3}
+    avatarURL: rpmcached://women4
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 4901986495271145183, guid: b7f9ec2261d703f4d8254fe90c2a2beb, type: 3}
+    avatarURL: rpmcached://men5
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 8706580484304523948, guid: 0e4ffbc20c1bc2e4587e5dd6d44ecbdf, type: 3}
+    avatarURL: rpmcached://men6
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 7484352669008166577, guid: 3f797c1329789b34982964778253a149, type: 3}
+    avatarURL: rpmcached://men7
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 7346862009199787686, guid: ff07a56bf191f074a889f0e510e0407c, type: 3}
+    avatarURL: rpmcached://men8
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 

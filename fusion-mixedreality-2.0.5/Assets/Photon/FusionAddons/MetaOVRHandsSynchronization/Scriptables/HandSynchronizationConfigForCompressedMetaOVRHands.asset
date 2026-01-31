@@ -1,0 +1,382 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6add6870e8f60ad4a85b649475e8f31c, type: 3}
+  m_Name: HandSynchronizationConfigForCompressedMetaOVRHands
+  m_EditorClassIdentifier: 
+  bonesInfo:
+  - boneId: 1
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 2
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 3
+    axisCompressionMode: 10
+    applyOffset: 1
+    offsetValue: {x: 46.6, y: -38.5, z: -53.6}
+    XminRange: -45
+    XmaxRange: 45
+    YminRange: 0
+    YmaxRange: 65
+    ZminRange: -15
+    ZmaxRange: 65
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 5
+    axisCompressionMode: 3
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -15
+    ZmaxRange: 90
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 4
+    axisCompressionMode: 2
+    applyOffset: 1
+    offsetValue: {x: 33, y: 0, z: 12.1}
+    XminRange: -180
+    XmaxRange: 180
+    YminRange: -35
+    YmaxRange: 50
+    ZminRange: -10
+    ZmaxRange: 45
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 6
+    axisCompressionMode: 3
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -30
+    ZmaxRange: 90
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 7
+    axisCompressionMode: 5
+    applyOffset: 1
+    offsetValue: {x: 2.5, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: -30
+    YmaxRange: 30
+    ZminRange: -15
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 8
+    axisCompressionMode: 3
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -5
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 9
+    axisCompressionMode: 12
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 90
+    followBoneDetails:
+      followedBone: 8
+      boneAxis: 2
+      minInputRot: 0
+      maxInputRot: 79.3
+  - boneId: 10
+    axisCompressionMode: 5
+    applyOffset: 1
+    offsetValue: {x: -1, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: -30
+    YmaxRange: 30
+    ZminRange: -15
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 11
+    axisCompressionMode: 3
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -5
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 12
+    axisCompressionMode: 12
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 90
+    followBoneDetails:
+      followedBone: 11
+      boneAxis: 2
+      minInputRot: 0
+      maxInputRot: 90
+  - boneId: 13
+    axisCompressionMode: 5
+    applyOffset: 1
+    offsetValue: {x: -5.2, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: -30
+    YmaxRange: 30
+    ZminRange: -15
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 14
+    axisCompressionMode: 3
+    applyOffset: 1
+    offsetValue: {x: -6, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -5
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 15
+    axisCompressionMode: 12
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 14
+      boneAxis: 2
+      minInputRot: 0
+      maxInputRot: 80
+  - boneId: 16
+    axisCompressionMode: 0
+    applyOffset: 1
+    offsetValue: {x: -17, y: -17.6, z: 3.3}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: -15
+    YmaxRange: 15
+    ZminRange: 0
+    ZmaxRange: 90
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 17
+    axisCompressionMode: 5
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: -15.11}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: -40
+    YmaxRange: 35
+    ZminRange: -35
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 18
+    axisCompressionMode: 3
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: -10
+    ZmaxRange: 110
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 19
+    axisCompressionMode: 12
+    applyOffset: 1
+    offsetValue: {x: -17.93, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 18
+      boneAxis: 2
+      minInputRot: 0
+      maxInputRot: 80
+  - boneId: 20
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 21
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 22
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 23
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  - boneId: 24
+    axisCompressionMode: 0
+    applyOffset: 0
+    offsetValue: {x: 0, y: 0, z: 0}
+    XminRange: 0
+    XmaxRange: 0
+    YminRange: 0
+    YmaxRange: 0
+    ZminRange: 0
+    ZmaxRange: 0
+    followBoneDetails:
+      followedBone: 0
+      boneAxis: 0
+      minInputRot: 0
+      maxInputRot: 0
+  limitHandChangeEmissionPersecond: 0
+  handChangeEmissionMinDelay: 0.07
+  interpolateBoneRotations: 1
+  storedInterpolationStates: 10
+  interpolationDelay: 0.1
+  uncompressingBoneDataOnNetworkChangesOnly: 1
+  debugRemoteRenderingLocally: 0

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8761287915977066618
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648426, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648470, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: m_Name
+      value: RPMNetworkRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648471, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: SortKey
+      value: 2537360028
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648471, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[0]
+      value: 4950629604174487238
+      objectReference: {fileID: 0}
+    - target: {fileID: 4512925641799648471, guid: c303825fb02cf55489e4729c88098245, type: 3}
+      propertyPath: NetworkGuid.RawGuidValue.Array.data[1]
+      value: 250612599184231499
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c303825fb02cf55489e4729c88098245, type: 3}
+--- !u!1 &5131703363993603244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4512925641799648470, guid: c303825fb02cf55489e4729c88098245, type: 3}
+  m_PrefabInstance: {fileID: 8761287915977066618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8781134440291892360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131703363993603244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7008fcdd14b2f0945a1786807bd02bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarOptionalFeatures: -1
+  startingAvatarUrl: 
+  avatarInfo:
+    avatarGameObject: {fileID: 0}
+    avatarURL: 
+    kind: 0
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+    handsPaths: []
+    handsGameObjects: []
+    facePath: 
+    faceMeshRenderer: {fileID: 0}
+    glassesPath: 
+    glassesRenderer: {fileID: 0}
+    headPath: 
+    headGameObject: {fileID: 0}
+    eyesPaths: []
+    eyeGameObjects: []
+    avatarRenderers: []
+    avatarDescription:
+      colorMode: 0
+      skinMaterial: {fileID: 0}
+      clothMaterial: {fileID: 0}
+      hairMaterial: {fileID: 0}
+      skinColor: {r: 0, g: 0, b: 0, a: 0}
+      clothColor: {r: 0, g: 0, b: 0, a: 0}
+      hairColor: {r: 0, g: 0, b: 0, a: 0}
+      hairMode: 0
+      isBald: 0
+      hairStyle: 0
+      includeHandRepresentation: 0
+  downloadProgress: 0
+  ignoreSkinToneMetadata: 1
+  avatarColorRequired: 1
+  loadLocalAvatar: 1
+  lodLevel: 0
+  avatarRPMScalefactor: 1.2
+  avatarParent: {fileID: 7444192042722595190}
+  soundForAvatarLoaded: OnAvatarLoaded
+  OVRLipSyncWeightPonderation: 100
+  simpleLipSyncWeightFactor: 1
+  lipSyncVolumeAmplification: 20
+  maxSameDownloadWaitTime: 10
+  copyRPMLoaderAvatar: 0
+  baseLeftEyeRotation: {x: 90, y: 0, z: 0}
+  baseRightEyeRotation: {x: 90, y: 0, z: 0}
+  baseLeftEyeRotationV3: {x: -90, y: 180, z: 0}
+  baseRightEyeRotationV3: {x: -90, y: 180, z: 0}
+  _avatarStatus: 2
+--- !u!4 &7444192042722595190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2222893414569564428, guid: c303825fb02cf55489e4729c88098245, type: 3}
+  m_PrefabInstance: {fileID: 8761287915977066618}
+  m_PrefabAsset: {fileID: 0}

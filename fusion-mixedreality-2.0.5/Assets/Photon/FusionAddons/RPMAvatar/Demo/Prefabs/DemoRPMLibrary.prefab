@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3824699395351341973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3824699395351341971}
+  - component: {fileID: 3824699395351341972}
+  m_Layer: 0
+  m_Name: DemoRPMLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3824699395351341971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824699395351341973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 99.81653, y: 1.1448758, z: 103.09365}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3824699395351341972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3824699395351341973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab7c8fb5e460834897fac2c588b798e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedAvatars:
+  - avatarGameObject: {fileID: 6633862132132527633, guid: 4a8b8a09c790c0c4eac9b990910e5e89, type: 3}
+    avatarURL: rpmcached://v2Seb
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 8056714748380318587, guid: be03c7f3eec303e43abc3ef1a0d8d852, type: 3}
+    avatarURL: rpmcached://v3manNoHairGlasses
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 2599935826281200179, guid: 1b638b875de17e24f992a7a833478b03, type: 3}
+    avatarURL: rpmcached://v1Richard
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
+  - avatarGameObject: {fileID: 640302501265106747, guid: 8e5705f5b2b2129488b316cdee54dad0, type: 3}
+    avatarURL: rpmcached://v3WomanCurlyHairGlasses
+    metadata:
+      BodyType: 0
+      OutfitGender: 0
+      SkinTone: 
