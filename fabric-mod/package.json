@@ -1,0 +1,13 @@
+{
+  "name": "microcosm-streamer-test-client",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "test": "node test-client.js localhost 25566",
+    "test:host": "node test-client.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

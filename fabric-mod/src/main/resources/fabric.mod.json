@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "microcosm-streamer",
+	"version": "${version}",
+	"name": "Microcosm Streamer",
+	"description": "Streams chunk/block data from Minecraft server to Unity MR (MicrocosmXR) via WebSocket.",
+	"authors": ["MicrocosmXR"],
+	"contact": {},
+	"license": "MIT",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"io.github.microcosmxr.streamer.MicrocosmStreamerMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.18.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
