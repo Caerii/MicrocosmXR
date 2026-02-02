@@ -6,12 +6,14 @@ Server-side Fabric mod for **Minecraft 1.21.11** that streams chunk and block da
 
 - **WebSocket server** on port **25566** (configurable in code). Unity or any client can connect to receive:
   - `HELLO` + `SET_ORIGIN` (text) on connect
-  - `CHUNK_SECTION_SNAPSHOT` (binary): palette + 4096 indices per 16×16×16 section
-  - `BLOCK_DELTA` (binary): single block change (x, y, z, blockStateId)
+  - `CHUNK_SECTION_SNAPSHOT` (binary): block palette + 4096 indices, block/sky light (4096 bytes each), biome palette + 64 indices per 16×16×16 section
+  - `BLOCK_DELTA` (binary): single block change (x, y, z, blockStateId) — sent on **block break** and **block place**
+  - `BLOCK_ENTITY` (binary): block entity at (x, y, z) with type ID and optional NBT
+  - `ENTITY_SPAWN` (binary): entity id, type, position, yaw, pitch — sent for entities in range when a client connects
 - **Commands**
   - `/mr_start <x> <y> <z>` — set stream origin (region center). Requires OP 2.
   - `/mr_dump_chunk <chunkX> <chunkZ> [sectionIndex]` — dump one chunk’s section data to server log to **verify blocks** without a client.
-- **Block break** — when a block is broken in range of the origin, a `BLOCK_DELTA` is sent to all connected clients.
+- **Block break and block place** — when a block is broken or placed in range of the origin, a `BLOCK_DELTA` is sent to all connected clients.
 
 ## Verify you’re getting blocks (no Unity yet)
 
@@ -31,7 +33,7 @@ Server-side Fabric mod for **Minecraft 1.21.11** that streams chunk and block da
 4. **Connect a WebSocket client**
    - One-liner (pnpm, semicolons): `cd fabric-mod; pnpm install; pnpm run test`
    - Or with custom host/port: `pnpm run test:host -- <host> <port>` (e.g. `pnpm run test:host -- localhost 25566`).
-   - You should receive text: `HELLO 1` and `SET_ORIGIN 0 64 0 0.02`.
+   - You should receive text: `HELLO 1` and `SET_ORIGIN 0 64 0 0.2`.
    - Then the server will send binary `CHUNK_SECTION_SNAPSHOT` messages for chunks around the origin. Set origin first with `/mr_start <x> <y> <z>` (e.g. your current position), then connect so the streamed region contains loaded chunks.
 
 ## Protocol (for your teammate / Unity)
@@ -39,11 +41,13 @@ Server-side Fabric mod for **Minecraft 1.21.11** that streams chunk and block da
 - **Text**
   - `HELLO <protocolVersion>`
   - `SET_ORIGIN <x0> <y0> <z0> <scale>`
-- **Binary**
-  - **CHUNK_SECTION_SNAPSHOT** (msg type 2): `byte type=2`, `int cx, cz, sy`, `int paletteLen`, then for each palette entry: `short len`, `utf8 bytes`, then 4096 × `short` indices.
-  - **BLOCK_DELTA** (msg type 3): `byte type=3`, `int x, y, z`, `short len`, `utf8 blockStateId`.
+- **Binary** (all multi-byte values big-endian)
+  - **CHUNK_SECTION_SNAPSHOT** (type 2): `byte 2`, `int cx, cz, sy`, block `paletteLen`, palette strings (each `short len` + utf8), 4096 × `short` block indices, 4096 bytes block light, 4096 bytes sky light, biome `paletteLen`, palette strings, 64 × `short` biome indices.
+  - **BLOCK_DELTA** (type 3): `byte 3`, `int x, y, z`, `short len`, `utf8 blockStateId`.
+  - **BLOCK_ENTITY** (type 4): `byte 4`, `int x, y, z`, `short typeLen`, `utf8 typeId`, `int nbtLen`, optional `byte[] nbt`.
+  - **ENTITY_SPAWN** (type 5): `byte 5`, `int entityId`, `short typeLen`, `utf8 typeId`, `double x, y, z`, `float yaw, pitch`.
 
-Block state IDs are strings like `minecraft:stone`, `minecraft:oak_planks[axis=z]` (same as Minecraft `BlockState.toString()`).
+Block state IDs are strings like `minecraft:stone`, `minecraft:oak_planks[axis=z]` (same as Minecraft `BlockState.toString()`). Biome and block-entity/entity type IDs use registry IDs (e.g. `minecraft:plains`, `minecraft:chest`, `minecraft:zombie`).
 
 ## Build
 

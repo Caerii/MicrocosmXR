@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/chunks.tsx","./src/scene.tsx","./src/blockatlas.generated.ts","./src/blockatlas.ts","./src/main.tsx","./src/sectionmesher.ts","./src/useatlastexture.ts","./src/usestream.ts","./src/vite-env.d.ts"],"version":"5.9.3"}

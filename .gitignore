@@ -1,2 +1,16 @@
 /fabric-mod/.gradle
 /fabric-mod/build
+
+# web-visualizer
+/web-visualizer/shared/dist
+/web-visualizer/server/dist
+/web-visualizer/client/dist
+/web-visualizer/node_modules
+/MicrocosmXR/Assets/Minecraft/server/.fabric
+/MicrocosmXR/Assets/Minecraft/server/libraries
+/web-visualizer/client/node_modules
+/web-visualizer/server/node_modules
+/web-visualizer/shared/node_modules
+/web-visualizer/scripts/node_modules
+/fabric-mod/node_modules
+/fabric-mod/run/world

@@ -1,0 +1,165 @@
+[19:28:44] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.11 with Fabric Loader 0.18.1
+[19:28:45] [main/INFO] (FabricLoader) Loading 43 mods:
+	- fabric-api 0.139.4+1.21.11
+	- fabric-api-base 1.0.5+4ebb5c0853
+	- fabric-api-lookup-api-v1 1.6.113+1fb1cde953
+	- fabric-biome-api-v1 17.1.1+4fc5413f53
+	- fabric-block-api-v1 1.1.10+4ebb5c0853
+	- fabric-block-view-api-v2 1.0.39+4ebb5c0853
+	- fabric-command-api-v2 2.4.6+4ebb5c0853
+	- fabric-content-registries-v0 10.2.14+4fc5413f53
+	- fabric-convention-tags-v1 2.1.55+7f945d5b53
+	- fabric-convention-tags-v2 2.17.3+8ef948ba53
+	- fabric-crash-report-info-v1 0.3.23+4ebb5c0853
+	- fabric-data-attachment-api-v1 1.8.42+1fb1cde953
+	- fabric-data-generation-api-v1 23.2.38+1d9b5c3553
+	- fabric-dimensions-v1 4.0.28+4fc5413f53
+	- fabric-entity-events-v1 3.0.5+4ebb5c0853
+	- fabric-events-interaction-v0 4.0.43+1fb1cde953
+	- fabric-game-rule-api-v1 2.0.3+4fc5413f53
+	- fabric-gametest-api-v1 3.1.27+4fc5413f53
+	- fabric-item-api-v1 11.5.19+78c8b46653
+	- fabric-item-group-api-v1 4.2.36+4fc5413f53
+	- fabric-lifecycle-events-v1 2.6.15+4ebb5c0853
+	- fabric-loot-api-v2 3.0.73+3f89f5a553
+	- fabric-loot-api-v3 2.0.20+78c8b46653
+	- fabric-message-api-v1 6.1.12+4ebb5c0853
+	- fabric-networking-api-v1 5.1.4+4ebb5c0853
+	- fabric-object-builder-api-v1 21.1.37+4fc5413f53
+	- fabric-particles-v1 4.2.10+4fc5413f53
+	- fabric-recipe-api-v1 8.2.2+4ebb5c0853
+	- fabric-registry-sync-v0 6.2.3+4ebb5c0853
+	- fabric-rendering-fluids-v1 3.1.43+4ebb5c0853
+	- fabric-resource-conditions-api-v1 5.0.35+4fc5413f53
+	- fabric-resource-loader-v0 3.3.4+4fc5413f53
+	- fabric-resource-loader-v1 1.0.10+78c8b46653
+	- fabric-screen-handler-api-v1 1.3.159+4fc5413f53
+	- fabric-serialization-api-v1 1.0.5+4ebb5c0853
+	- fabric-tag-api-v1 1.2.20+4fc5413f53
+	- fabric-transfer-api-v1 6.0.24+4fc5413f53
+	- fabric-transitive-access-wideners-v1 7.0.7+1fb1cde953
+	- fabricloader 0.18.1
+	- java 21
+	- microcosm-streamer 0.1.0
+	- minecraft 1.21.11
+	- mixinextras 0.5.0
+[19:28:45] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/locke/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/80fc3a9f592673cea87f4cd702f87991c6c9fe4d/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[19:28:45] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[19:28:46] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[19:28:47] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[19:29:07] [main/INFO] (microcosm-streamer) Microcosm Streamer initializing (server-side)
+[19:29:07] [main/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[19:29:09] [Yggdrasil Key Fetcher/ERROR] (Minecraft) Got an error with a html body connecting to https://api.minecraftservices.com/publickeys: <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+    <style type='text/css'>
+        body {
+            font-family: Arial;
+            margin-left: 40px;
+        }
+
+        img {
+            border: 0 none;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        #message h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message p {
+            font-size: 16px;
+            color: #000000;
+            margin: 8px 0px 0px 0px
+        }
+
+        #message hr {
+            margin: 15px 0px
+        }
+
+        #errorref {
+            font-size: 11px;
+            color: #737373;
+            margin-top: 41px
+        }
+    </style>
+    <title>Service unavailable</title>
+</head>
+
+<body>
+    <div id='content'>
+        <div id='message'>
+            <h2>The request is blocked.</h2>
+        </div>
+        <div id='errorref'>
+            <span>20260202T002908Z-r17d45d946fpjcgchC1TEB605s00000005s0000000000vcq            </span>
+        </div>
+    </div>
+</body>
+</html>
+
+[19:29:09] [Yggdrasil Key Fetcher/ERROR] (Minecraft) Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 429
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:100)
+	at knot//com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:56)
+	at knot//com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114)
+	at knot//com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[19:29:10] [main/INFO] (Minecraft) No existing world data, creating new world
+[19:29:13] [main/INFO] (Minecraft) Loaded 1470 recipes
+[19:29:13] [main/INFO] (Minecraft) Loaded 1584 advancements
+[19:29:14] [main/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 65 new biomes in 9.003 ms
+[19:29:14] [Server thread/INFO] (Minecraft) Starting minecraft server version 1.21.11
+[19:29:14] [Server thread/INFO] (Minecraft) Loading properties
+[19:29:14] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
+[19:29:14] [Server thread/INFO] (Minecraft) Generating keypair
+[19:29:14] [Server thread/INFO] (Minecraft) Starting Minecraft server on *:25565
+[19:29:15] [Server thread/INFO] (Minecraft) Preparing level "world"
+[19:29:16] [Server thread/INFO] (Minecraft) Selecting global world spawn...
+[19:29:23] [Server thread/INFO] (Minecraft) Loading 0 persistent chunks...
+[19:29:23] [Server thread/INFO] (Minecraft) Preparing spawn area: 100%
+[19:29:23] [Server thread/INFO] (Minecraft) Time elapsed: 7638 ms
+[19:29:23] [Server thread/INFO] (Minecraft) Done (8.793s)! For help, type "help"
+[19:29:23] [Server thread/INFO] (microcosm-streamer) Microcosm Streamer WebSocket server listening on port 25566
+[19:29:23] [WebSocketSelector-133/INFO] (microcosm-streamer) Microcosm Streamer WebSocket server started on port 25566
+[19:29:27] [WebSocketWorker-111/INFO] (microcosm-streamer) Streamer client connected (total: 1)
+[19:29:46] [WebSocketSelector-133/INFO] (microcosm-streamer) Streamer client disconnected (remaining: 0)
+[19:29:52] [WebSocketWorker-112/INFO] (microcosm-streamer) Streamer client connected (total: 1)
+[19:29:57] [WebSocketSelector-133/INFO] (microcosm-streamer) Streamer client disconnected (remaining: 0)
+[19:29:59] [WebSocketWorker-113/INFO] (microcosm-streamer) Streamer client connected (total: 1)
+[19:30:03] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 6 entities to new client (origin 0 64 0)
+[19:30:03] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 36327ms or 726 ticks behind
+[19:30:05] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 6 entities to new client (origin 0 64 0)
+[19:30:08] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 6 entities to new client (origin 0 64 0)
+[19:31:00] [Server thread/INFO] (Minecraft) Server empty for 60 seconds, pausing
+[19:34:46] [WebSocketSelector-133/INFO] (microcosm-streamer) Streamer client disconnected (remaining: 0)
+[19:36:38] [WebSocketWorker-114/INFO] (microcosm-streamer) Streamer client connected (total: 1)
+[19:36:51] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 0 entities to new client (origin 0 64 0)
+[19:36:51] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 13265ms or 265 ticks behind
+[19:41:22] [WebSocketWorker-115/INFO] (microcosm-streamer) Streamer client connected (total: 2)
+[19:41:24] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 0 entities to new client (origin 0 64 0)
+[19:42:07] [WebSocketSelector-133/INFO] (microcosm-streamer) Streamer client disconnected (remaining: 1)
+[19:44:10] [WebSocketWorker-116/INFO] (microcosm-streamer) Streamer client connected (total: 2)
+[19:44:12] [Server thread/INFO] (microcosm-streamer) Streamed 2452 chunk sections, block entities, 0 entities to new client (origin 0 64 0)
+[19:44:12] [Server thread/WARN] (Minecraft) Can't keep up! Is the server overloaded? Running 2364ms or 47 ticks behind

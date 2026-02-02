@@ -78,17 +78,20 @@ Use **binary frames** (not JSON) for snapshots/deltas. Text is fine for HELLO/SE
 |---------|-----------|---------|
 | `HELLO` | Either | Protocol version, optional capabilities. |
 | `SET_ORIGIN` | Server → Client | `(x0, y0, z0, scale)` — Minecraft origin and block-to-Unity scale. |
-| `CHUNK_SECTION_SNAPSHOT` | Server → Client | One 16×16×16 section: `(cx, cz, sy)`, `palette[]`, `indices[4096]`. |
-| `BLOCK_DELTA` | Server → Client | Single block change: `(x, y, z)`, new block state ID (or palette index). |
-| `ENTITY_SPAWN` | Server → Client | `(id, type, x, y, z, yaw, pitch)` — add later. |
-| `ENTITY_UPDATE` | Server → Client | `(id, x, y, z, yaw, pitch)`. |
-| `ENTITY_DESPAWN` | Server → Client | `(id)`. |
+| `CHUNK_SECTION_SNAPSHOT` | Server → Client | One 16×16×16 section: `(cx, cz, sy)`, block palette + 4096 indices, block/sky light (4096 bytes each), biome palette + 64 indices. |
+| `BLOCK_DELTA` | Server → Client | Single block change: `(x, y, z)`, new block state ID. Sent on break and place. |
+| `BLOCK_ENTITY` | Server → Client | Block entity at `(x, y, z)` with type ID and optional NBT. |
+| `ENTITY_SPAWN` | Server → Client | `(id, type, x, y, z, yaw, pitch)` — sent for entities in range when client connects. |
+| `ENTITY_UPDATE` | Server → Client | `(id, x, y, z, yaw, pitch)` — optional later. |
+| `ENTITY_DESPAWN` | Server → Client | `(id)` — optional later. |
 
-**Chunk section format (MVP):**
+**Chunk section format (implemented):**
 
 - **Chunk coords:** `cx`, `cz` (int), `sy` (section Y index).
-- **Palette:** list of block state IDs (e.g. `minecraft:stone`, `minecraft:oak_planks`). Send as length-prefixed strings or a single packed string table.
-- **Indices:** 4096 values (one per block in the section). Each value is an index into the palette. MVP: send as `ushort[4096]`; later use bitpacking (e.g. 4–12 bits per index depending on palette size).
+- **Block palette:** list of block state IDs (e.g. `minecraft:stone`). Length-prefixed UTF-8 strings.
+- **Block indices:** 4096 × `ushort` (one per block in the section).
+- **Light:** 4096 bytes block light, 4096 bytes sky light (0–15 per block).
+- **Biome palette:** list of biome IDs (e.g. `minecraft:plains`). 4×4×4 quart grid = 64 indices × `ushort`.
 
 Start with **HELLO**, **SET_ORIGIN**, **CHUNK_SECTION_SNAPSHOT**, **BLOCK_DELTA**. Add entities once the block pipeline is stable.
 

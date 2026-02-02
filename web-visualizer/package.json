@@ -1,0 +1,16 @@
+{
+  "name": "web-visualizer",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run dev:server & pnpm run dev:client",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter shared build && pnpm --filter client dev",
+    "build": "pnpm --filter shared build && pnpm --filter client build && pnpm --filter server build",
+    "start": "pnpm --filter server start",
+    "build-atlas": "cd scripts && pnpm install && node build-atlas.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

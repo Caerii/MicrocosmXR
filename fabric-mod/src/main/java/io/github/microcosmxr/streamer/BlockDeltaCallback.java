@@ -23,7 +23,7 @@ public final class BlockDeltaCallback {
 			// Block broken -> new state is air
 			server.broadcastBlockDelta(pos.getX(), pos.getY(), pos.getZ(), "minecraft:air");
 		});
-		// Block place: can be added later via Fabric BlockPlaceCallback or mixin on setBlockState
+		// Block place: handled by LevelSetBlockMixin (on Level.setBlock) which calls onBlockSet()
 	}
 
 	private static boolean inRange(StreamerServer server, int x, int y, int z) {
@@ -34,10 +34,10 @@ public final class BlockDeltaCallback {
 	}
 
 	/** Call this when a block is set (e.g. from a mixin or world change listener) to broadcast the new state. */
-	public static void onBlockSet(int x, int y, int z, BlockState newState) {
+	public static void onBlockSet(net.minecraft.server.level.ServerLevel level, int x, int y, int z, BlockState newState) {
 		StreamerServer server = MicrocosmStreamerMod.getStreamerServer();
 		if (server == null) return;
 		if (!inRange(server, x, y, z)) return;
-		server.broadcastBlockDelta(x, y, z, ChunkSerializer.blockStateToString(newState));
+		server.broadcastBlockDelta(x, y, z, ChunkSerializer.blockStateToString(level.registryAccess(), newState));
 	}
 }

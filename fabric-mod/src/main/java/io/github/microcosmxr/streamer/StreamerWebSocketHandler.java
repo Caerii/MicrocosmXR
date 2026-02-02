@@ -19,6 +19,8 @@ public class StreamerWebSocketHandler {
 	private static final byte MSG_SET_ORIGIN = 1;
 	private static final byte MSG_CHUNK_SECTION_SNAPSHOT = 2;
 	private static final byte MSG_BLOCK_DELTA = 3;
+	private static final byte MSG_BLOCK_ENTITY = 4;
+	private static final byte MSG_ENTITY_SPAWN = 5;
 
 	private final WebSocket socket;
 	private final StreamerServer streamerServer;
@@ -40,7 +42,7 @@ public class StreamerWebSocketHandler {
 		}
 	}
 
-	public void sendChunkSectionSnapshot(int cx, int cz, int sy, List<String> palette, short[] indices) {
+	public void sendChunkSectionSnapshot(int cx, int cz, int sy, ChunkSerializer.SectionSnapshot snap) {
 		if (!socket.isOpen()) return;
 		try {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -49,14 +51,28 @@ public class StreamerWebSocketHandler {
 			out.writeInt(cx);
 			out.writeInt(cz);
 			out.writeInt(sy);
-			out.writeInt(palette.size());
-			for (String s : palette) {
+			// Block palette + indices
+			out.writeInt(snap.palette.size());
+			for (String s : snap.palette) {
 				byte[] b = s.getBytes(StandardCharsets.UTF_8);
 				out.writeShort(b.length);
 				out.write(b);
 			}
 			for (int i = 0; i < 4096; i++) {
-				out.writeShort(indices[i] & 0xFFFF);
+				out.writeShort(snap.indices[i] & 0xFFFF);
+			}
+			// Block light (4096 bytes), sky light (4096 bytes)
+			out.write(snap.blockLight, 0, 4096);
+			out.write(snap.skyLight, 0, 4096);
+			// Biome palette + 64 indices
+			out.writeInt(snap.biomePalette.size());
+			for (String s : snap.biomePalette) {
+				byte[] b = s.getBytes(StandardCharsets.UTF_8);
+				out.writeShort(b.length);
+				out.write(b);
+			}
+			for (int i = 0; i < 64; i++) {
+				out.writeShort(snap.biomeIndices[i] & 0xFFFF);
 			}
 			out.flush();
 			socket.send(baos.toByteArray());
@@ -81,6 +97,50 @@ public class StreamerWebSocketHandler {
 			socket.send(baos.toByteArray());
 		} catch (IOException e) {
 			MicrocosmStreamerMod.LOGGER.warn("Failed to send block delta", e);
+		}
+	}
+
+	public void sendBlockEntity(int x, int y, int z, String typeId, byte[] nbt) {
+		if (!socket.isOpen()) return;
+		try {
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			DataOutputStream out = new DataOutputStream(baos);
+			out.writeByte(MSG_BLOCK_ENTITY);
+			out.writeInt(x);
+			out.writeInt(y);
+			out.writeInt(z);
+			byte[] typeBytes = typeId.getBytes(StandardCharsets.UTF_8);
+			out.writeShort(typeBytes.length & 0xFFFF);
+			out.write(typeBytes);
+			int nbtLen = nbt != null ? nbt.length : 0;
+			out.writeInt(nbtLen);
+			if (nbtLen > 0) out.write(nbt);
+			out.flush();
+			socket.send(baos.toByteArray());
+		} catch (IOException e) {
+			MicrocosmStreamerMod.LOGGER.warn("Failed to send block entity", e);
+		}
+	}
+
+	public void sendEntitySpawn(int entityId, String typeId, double x, double y, double z, float yaw, float pitch) {
+		if (!socket.isOpen()) return;
+		try {
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			DataOutputStream out = new DataOutputStream(baos);
+			out.writeByte(MSG_ENTITY_SPAWN);
+			out.writeInt(entityId);
+			byte[] typeBytes = typeId.getBytes(StandardCharsets.UTF_8);
+			out.writeShort(typeBytes.length & 0xFFFF);
+			out.write(typeBytes);
+			out.writeDouble(x);
+			out.writeDouble(y);
+			out.writeDouble(z);
+			out.writeFloat(yaw);
+			out.writeFloat(pitch);
+			out.flush();
+			socket.send(baos.toByteArray());
+		} catch (IOException e) {
+			MicrocosmStreamerMod.LOGGER.warn("Failed to send entity spawn", e);
 		}
 	}
 }

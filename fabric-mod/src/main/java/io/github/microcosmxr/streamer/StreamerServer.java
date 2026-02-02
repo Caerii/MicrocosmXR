@@ -21,7 +21,7 @@ public class StreamerServer {
 	private volatile int originX;
 	private volatile int originY;
 	private volatile int originZ;
-	private static final double DEFAULT_SCALE = 0.02;
+	private static final double DEFAULT_SCALE = 0.2;
 
 	public StreamerServer(MinecraftServer server, int port) {
 		this.server = server;
@@ -80,9 +80,9 @@ public class StreamerServer {
 		MicrocosmStreamerMod.LOGGER.info("Streamer client disconnected (remaining: {})", clients.size());
 	}
 
-	public void broadcastChunkSectionSnapshot(int cx, int cz, int sy, List<String> palette, short[] indices) {
+	public void broadcastChunkSectionSnapshot(int cx, int cz, int sy, ChunkSerializer.SectionSnapshot snap) {
 		for (StreamerWebSocketHandler client : clients) {
-			client.sendChunkSectionSnapshot(cx, cz, sy, palette, indices);
+			client.sendChunkSectionSnapshot(cx, cz, sy, snap);
 		}
 	}
 

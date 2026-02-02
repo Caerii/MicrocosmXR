@@ -1,0 +1,12 @@
+{
+  "name": "build-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build-atlas": "node build-atlas.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5",
+    "yauzl": "^2.10.0"
+  }
+}
